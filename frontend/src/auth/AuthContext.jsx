@@ -37,10 +37,7 @@ export function AuthProvider({ children }) {
       avatar: null,
     };
 
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(loggedInUser)
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(loggedInUser));
 
     setUser(loggedInUser);
 
@@ -53,9 +50,7 @@ export function AuthProvider({ children }) {
     }
 
     if (password.length < 8) {
-      throw new Error(
-        "Password must contain at least 8 characters."
-      );
+      throw new Error("Password must contain at least 8 characters.");
     }
 
     const newUser = {
@@ -65,10 +60,7 @@ export function AuthProvider({ children }) {
       avatar: null,
     };
 
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(newUser)
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
 
     setUser(newUser);
 
@@ -89,20 +81,14 @@ export function AuthProvider({ children }) {
     logout,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {
   const context = useContext(AuthContext);
 
   if (!context) {
-    throw new Error(
-      "useAuth must be used inside AuthProvider"
-    );
+    throw new Error("useAuth must be used inside AuthProvider");
   }
 
   return context;

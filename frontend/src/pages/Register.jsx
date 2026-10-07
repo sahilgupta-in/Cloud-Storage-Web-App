@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  ArrowRight,
-  Cloud,
-  Eye,
-  EyeOff,
-  Lock,
-  Mail,
-  User,
-} from "lucide-react";
+import { ArrowRight, Cloud, Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 
@@ -210,16 +202,10 @@ function PasswordInput({
 
         <button
           type="button"
-          onClick={() =>
-            setShowPassword((value) => !value)
-          }
+          onClick={() => setShowPassword((value) => !value)}
           className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
         >
-          {showPassword ? (
-            <EyeOff size={18} />
-          ) : (
-            <Eye size={18} />
-          )}
+          {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
         </button>
       </div>
     </div>
@@ -235,9 +221,7 @@ function AuthLayout({ children }) {
             <Cloud size={21} />
           </div>
 
-          <span className="text-lg font-bold">
-            CloudBox
-          </span>
+          <span className="text-lg font-bold">CloudBox</span>
         </div>
 
         <div className="max-w-lg">
@@ -248,20 +232,15 @@ function AuthLayout({ children }) {
           </p>
 
           <p className="mt-5 text-slate-400">
-            Organize your documents, photos and projects
-            in your personal cloud.
+            Organize your documents, photos and projects in your personal cloud.
           </p>
         </div>
 
-        <p className="text-sm text-slate-500">
-          © 2026 CloudBox
-        </p>
+        <p className="text-sm text-slate-500">© 2026 CloudBox</p>
       </div>
 
       <div className="flex w-full items-center justify-center p-6 lg:w-[520px] lg:p-12">
-        <div className="w-full max-w-md">
-          {children}
-        </div>
+        <div className="w-full max-w-md">{children}</div>
       </div>
     </div>
   );

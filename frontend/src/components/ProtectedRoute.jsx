@@ -11,22 +11,14 @@ export default function ProtectedRoute() {
         <div className="text-center">
           <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-blue-600" />
 
-          <p className="mt-3 text-sm text-slate-500">
-            Loading...
-          </p>
+          <p className="mt-3 text-sm text-slate-500">Loading...</p>
         </div>
       </div>
     );
   }
 
   if (!isAuthenticated) {
-    return (
-      <Navigate
-        to="/login"
-        replace
-        state={{ from: location }}
-      />
-    );
+    return <Navigate to="/login" replace state={{ from: location }} />;
   }
 
   return <Outlet />;

@@ -62,9 +62,7 @@ export default function Dashboard() {
       {/* Folders */}
       <section className="mb-10">
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-slate-900">
-            Folders
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900">Folders</h3>
 
           <button className="text-sm font-medium text-blue-600 hover:text-blue-700">
             View all
@@ -82,15 +80,10 @@ export default function Dashboard() {
                   <Folder size={22} />
                 </div>
 
-                <MoreVertical
-                  size={19}
-                  className="text-slate-400"
-                />
+                <MoreVertical size={19} className="text-slate-400" />
               </div>
 
-              <h4 className="font-semibold text-slate-800">
-                {folder.name}
-              </h4>
+              <h4 className="font-semibold text-slate-800">{folder.name}</h4>
 
               <p className="mt-1 text-xs text-slate-400">
                 {folder.items} items
@@ -103,9 +96,7 @@ export default function Dashboard() {
       {/* Recent files */}
       <section>
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-slate-900">
-            Recent Files
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900">Recent Files</h3>
 
           <button className="text-sm font-medium text-blue-600 hover:text-blue-700">
             View all

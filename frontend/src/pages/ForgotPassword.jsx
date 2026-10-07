@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle2,
-  Cloud,
-  Mail,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Cloud, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function ForgotPassword() {
@@ -35,8 +29,7 @@ export default function ForgotPassword() {
               </h1>
 
               <p className="mt-2 text-sm text-slate-500">
-                Enter your email and we'll send you a
-                password reset link.
+                Enter your email and we'll send you a password reset link.
               </p>
             </>
           ) : (
@@ -50,9 +43,8 @@ export default function ForgotPassword() {
               </h1>
 
               <p className="mt-2 text-sm text-slate-500">
-                If an account exists for{" "}
-                <strong>{email}</strong>, you'll receive
-                reset instructions.
+                If an account exists for <strong>{email}</strong>, you'll
+                receive reset instructions.
               </p>
             </>
           )}
@@ -78,9 +70,7 @@ export default function ForgotPassword() {
                 type="email"
                 placeholder="you@example.com"
                 value={email}
-                onChange={(event) =>
-                  setEmail(event.target.value)
-                }
+                onChange={(event) => setEmail(event.target.value)}
                 className="w-full rounded-xl border border-slate-200 py-3 pl-11 pr-4 text-sm outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-50"
               />
             </div>

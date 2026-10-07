@@ -76,6 +76,22 @@ const initialFiles = [
     bytes: 1200000,
     updated: "Sep 25",
   },
+  {
+    id: 7,
+    name: "College Notes.docx",
+    type: "document",
+    size: "8.2 MB",
+    bytes: 8200000,
+    updated: "Sep 15",
+  },
+  {
+    id: 8,
+    name: "Home Notes.docx",
+    type: "document",
+    size: "3.6 MB",
+    bytes: 3600000,
+    updated: "Aug 25",
+  },
 ];
 
 const fileTypeIcons = {
@@ -624,7 +640,7 @@ function ItemMenu({ item, onClose, onDelete }) {
         {onDelete && (
           <button
             onClick={onDelete}
-            className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm text-red-600 hover:bg-red-50"
+            className="flex w-full items-center gap-3  rounded-xl px-3 py-3 text-left text-sm text-red-600 hover:bg-red-50"
           >
             <Trash2 size={17} />
             Move to Trash
